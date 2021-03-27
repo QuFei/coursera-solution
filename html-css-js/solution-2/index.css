@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+}
+#app {
+    text-align: center;
+    margin: 0 30px;
+}
+
+#app h1{
+    font-size: 28px;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menuItem{
+    min-width: 295px;
+    border: 1px solid black;
+    flex: 1;
+    margin-bottom: 20px;
+    background-color: #999999;
+}
+
+
+.menuItem:not(:last-child) {
+    margin-right: 20px;
+}
+
+.menuItem .menuTitle {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+.menuItem:nth-child(1) .menuTitle span{
+    background-color: #D49898;
+}
+.menuItem:nth-child(2) .menuTitle span{
+    background-color: #C04643;
+    color: white;
+}
+.menuItem:nth-child(3) .menuTitle span{
+    background-color: #E5D198;
+}
+.menuItem .menuTitle span {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+.menuItem .menuContent {
+    text-align: left;
+    padding: 0 10px;
+}
+
+@media(max-width: 991px) {
+    .menuItem:nth-child(2){
+        margin-right: 0;
+    }
+    .menuItem:last-child {
+        min-width: 100%;
+    }
+}
+
+@media(max-width: 768px) {
+    .menuItem{
+        margin-right: 0;
+        min-width: 100%;
+    }
+}
